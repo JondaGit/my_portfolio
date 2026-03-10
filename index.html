@@ -1,143 +1,406 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Jonas Tichy - Software Engineer Portfolio">
-    <title>Jonas Tichy | Software Engineer</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Jonáš Tichý — Full Stack Software Engineer & AI Specialist building intelligent systems across logistics, healthcare, and procurement domains."
+    />
+    <meta
+      property="og:title"
+      content="Jonáš Tichý | Full Stack Software Engineer"
+    />
+    <meta
+      property="og:description"
+      content="Full stack engineer with 10+ years of experience, currently at Adastra AI."
+    />
+    <meta property="og:type" content="website" />
+    <title>Jonáš Tichý | Software Engineer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
     <!-- NAVBAR -->
-    <div class="navbar">
-        <a class="nav-title-link" href="./index.html">
-            <span class="nav-title">Jonas Tichy</span>
-        </a>
-        <a class="button" href="mailto:your.email@example.com">
-            <span class="button-text">Contact Me</span>
-        </a>
-    </div>
+    <nav
+      class="navbar"
+      id="navbar"
+      role="navigation"
+      aria-label="Main navigation"
+    >
+      <div class="nav-links">
+        <a class="nav-link" href="#about">About</a>
+        <a class="nav-link" href="#experience">Experience</a>
+        <a class="nav-link" href="#projects">Projects</a>
+        <a class="nav-link" href="#education">Education</a>
+      </div>
+      <a
+        class="button"
+        href="mailto:jon.tich@volny.cz"
+        aria-label="Send email to Jonáš Tichý"
+      >
+        <span class="button-text">Contact Me</span>
+      </a>
+    </nav>
 
     <!-- MAIN PAGE CONTENT -->
     <div id="main-content">
-
-        <!-- PORTFOLIO HEADER -->
+      <!-- HERO -->
+      <section id="hero" aria-label="Introduction">
         <div id="portfolio-header">
-            <div id="portfolio-header-image-container">
-                <div class="portfolio-header-image">[Your Photo]</div>
-                <div class="image-caption">[Your Photo Caption]</div>
+          <div id="portfolio-header-image-container">
+            <img
+              src="./assets/Sn%C3%ADmek%20obrazovky%202025-10-15%20v%208.24.34.png"
+              class="portfolio-header-image"
+              alt="Jonáš Tichý"
+            />
+          </div>
+          <div id="portfolio-header-text-container">
+            <div class="hero-label">Full Stack Software Engineer</div>
+            <h1 class="main-title">Hi, I'm Jonáš Tichý.</h1>
+            <p class="body-text hero-bio">
+              Full stack engineer with 10+ years of experience building software
+              across healthcare, logistics, and AI. Currently at Adastra AI,
+              working on optimization and generative AI systems from pre-sales,
+              design, architecture, and development through deployment and
+              maintenance.
+            </p>
+            <div class="hero-actions">
+              <a class="button" href="#projects">
+                <span class="button-text">View my projects</span>
+                <span class="arrow-icon" aria-hidden="true">↓</span>
+              </a>
+              <a class="button button-ghost" href="mailto:jon.tich@volny.cz">
+                <span class="button-text">Contact Me</span>
+              </a>
             </div>
-            <div id="portfolio-header-text-container">
-                <div class="header-text">
-                    <span class="main-title">Hey, I'm Jonas Tichy.</span>
-                    <div class="body-text">Software Engineer & AI Specialist building intelligent systems and modern applications with a focus on performance and user experience.</div>
-                </div>
-                <a class="button" href="#my-work-section">
-                    <span class="button-text">Check out my projects</span>
-                    <span class="right-arrow-icon">→</span>
-                </a>
-            </div>
+          </div>
         </div>
+      </section>
 
-        <!-- ABOUT SECTION -->
-        <div id="about-section">
-            <span class="subheader-text">My Background / About Me</span>
-            <div class="about-section-content">
-                <div class="body-text">I'm a software engineer specializing in AI systems, mobile applications, and web development. With experience ranging from Android apps for the Czech Academy of Sciences to AI-powered procurement platforms, I bring a diverse skillset to every project.</div>
-                <div class="body-text">My work focuses on creating robust, user-friendly solutions that solve real-world problems. I have a particular interest in large language models, computer vision, and real-time systems. Currently, I'm developing an AI platform for automated procurement document analysis, helping businesses streamline their bidding processes through intelligent automation.</div>
-            </div>
+      <!-- ABOUT -->
+      <section id="about" aria-label="About Jonáš Tichý">
+        <span class="subheader-text">My Background / About Me</span>
+        <div class="about-section-content">
+          <p class="body-text">
+            Full stack software engineer with over 10 years of experience
+            building software solutions across various domains. Currently
+            working at Adastra AI on optimization and AI projects spanning the
+            full lifecycle — from pre-sales and solution design to development,
+            deployment, and maintenance.
+          </p>
+          <p class="body-text">
+            Alongside my professional work, I actively build and ship personal
+            projects, explore new technologies, tackle challenging problems, and
+            create useful software solutions.
+          </p>
         </div>
+      </section>
 
-        <!-- PROJECTS / MY WORK SECTION -->
-        <div id="my-work-section">
-            <span class="subheader-text">My Work / My Projects</span>
-
-            <div class="projects-container">
-                <!-- Species Collector -->
-                <div class="project-card">
-                    <div class="project-card-text-container">
-                        <div class="subheader-text project-title">Species Collector</div>
-                        <div class="body-text project-card-text">Offline mobile tool for recording vegetation samples intended for global botanist community. Built with Java for Android as a solo freelance project, published on Google Play.</div>
-                    </div>
-                    <div class="project-tags">
-                        <span class="tag">#Android</span>
-                        <span class="tag">#Java</span>
-                        <span class="tag">#Freelance</span>
-                    </div>
-                </div>
-
-                <!-- iBees -->
-                <div class="project-card">
-                    <div class="project-card-text-container">
-                        <div class="subheader-text project-title">iBees</div>
-                        <div class="body-text project-card-text">Quizzing tool for Czech schools using custom matrix barcode detection in real time. Developed with Java for Android and OpenCV library.</div>
-                    </div>
-                    <div class="project-tags">
-                        <span class="tag">#Android</span>
-                        <span class="tag">#Java</span>
-                        <span class="tag">#OpenCV</span>
-                        <span class="tag">#ComputerVision</span>
-                    </div>
-                </div>
-
-                <!-- Showlifter -->
-                <div class="project-card">
-                    <div class="project-card-text-container">
-                        <div class="subheader-text project-title">Showlifter</div>
-                        <div class="body-text project-card-text">Real-time web app focused on enhancing viewer experience at live events. Built with SvelteKit and Firebase for both hosting and backend services.</div>
-                    </div>
-                    <div class="project-tags">
-                        <span class="tag">#SvelteKit</span>
-                        <span class="tag">#Firebase</span>
-                        <span class="tag">#Real-time</span>
-                        <span class="tag">#WebApp</span>
-                    </div>
-                </div>
-
-                <!-- Tender Intelligence -->
-                <div class="project-card">
-                    <div class="project-card-text-container">
-                        <div class="subheader-text project-title">Tender Intelligence</div>
-                        <div class="body-text project-card-text">AI platform for automated procurement document analysis using large language models to extract structured information and enable intelligent product fulfillment search.</div>
-                    </div>
-                    <div class="project-tags">
-                        <span class="tag">#AI</span>
-                        <span class="tag">#LLM</span>
-                        <span class="tag">#NLP</span>
-                        <span class="tag">#Production</span>
-                    </div>
-                </div>
-
-                <!-- Bachelor Thesis -->
-                <div class="project-card">
-                    <div class="project-card-text-container">
-                        <div class="subheader-text project-title">[Your Thesis Title]</div>
-                        <div class="body-text project-card-text">[Your University Name] • [Year of Completion]. Brief description of your bachelor thesis research, methodology, and key findings.</div>
-                    </div>
-                    <div class="project-tags">
-                        <span class="tag">#Research</span>
-                        <span class="tag">#Academic</span>
-                    </div>
-                </div>
+      <!-- EXPERIENCE -->
+      <section id="experience" aria-label="Work experience">
+        <span class="subheader-text">My Work / Experience</span>
+        <div class="experience-list">
+          <div class="experience-item">
+            <div class="experience-meta">
+              <span class="experience-period">May 2024 – Present</span>
+              <span class="experience-sep" aria-hidden="true">/</span>
+              <span class="experience-org">Adastra (Blindspot AI)</span>
             </div>
+            <h3 class="experience-title">Full Stack Engineer</h3>
+            <p class="body-text">
+              Working as a Full Stack Developer at Blindspot AI (Adastra AI),
+              contributing to optimization and Generative AI projects across
+              multiple industries. Involved in the full lifecycle of projects
+              from pre-sales and solution design through system architecture,
+              development, security and deployment. Worked on solutions
+              including logistics and route optimization, document processing
+              and knowledge extraction using large language models, and
+              production line optimization systems.
+            </p>
+            <div class="tag-row">
+              <span class="tag">Python</span>
+              <span class="tag">Kotlin</span>
+              <span class="tag">Docker</span>
+              <span class="tag">Terraform</span>
+              <span class="tag">AWS</span>
+              <span class="tag-more-wrapper">
+                <button class="tag tag-more" aria-expanded="false">
+                  +6 more
+                </button>
+                <div class="tag-popover" hidden>
+                  <span class="tag">Azure</span>
+                  <span class="tag">LLMs</span>
+                  <span class="tag">React</span>
+                  <span class="tag">Svelte</span>
+                  <span class="tag">CI/CD</span>
+                  <span class="tag">Kubernetes</span>
+                </div>
+              </span>
+            </div>
+          </div>
+
+          <div class="experience-item">
+            <div class="experience-meta">
+              <span class="experience-period">Jul 2021 – Apr 2023</span>
+              <span class="experience-sep" aria-hidden="true">/</span>
+              <span class="experience-org">CSolution s.r.o</span>
+            </div>
+            <h3 class="experience-title">Full Stack Engineer &amp; DevOps</h3>
+            <p class="body-text">
+              Worked as a full stack developer on information systems for
+              healthcare. Day-to-day included work with Angular, Caché
+              ObjectScript, and MongoDB. Also served as DevOps engineer — helped
+              automate CI/CD processes, worked on infrastructure upgrades and
+              documentation using Kubernetes, GitLab CI/CD and Helm.
+            </p>
+            <div class="tag-row">
+              <span class="tag">Angular</span>
+              <span class="tag">Kubernetes</span>
+              <span class="tag">MongoDB</span>
+              <span class="tag">GitLab CI/CD</span>
+              <span class="tag">Helm</span>
+              <span class="tag-more-wrapper">
+                <button class="tag tag-more" aria-expanded="false">
+                  +2 more
+                </button>
+                <div class="tag-popover" hidden>
+                  <span class="tag">Docker</span>
+                  <span class="tag">Caché ObjectScript</span>
+                </div>
+              </span>
+            </div>
+          </div>
+
+          <div class="experience-item">
+            <div class="experience-meta">
+              <span class="experience-period">Sep 2019 – Jun 2021</span>
+              <span class="experience-sep" aria-hidden="true">/</span>
+              <span class="experience-org">Pixels Production</span>
+            </div>
+            <h3 class="experience-title">
+              Software Specialist
+              <span class="experience-note">(part-time)</span>
+            </h3>
+            <p class="body-text">
+              Supervised Czech first league Ice Hockey live broadcasts. Learned
+              to work in a coordinated team under pressure in a fast-paced
+              broadcast environment.
+            </p>
+            <div class="tag-row">
+              <span class="tag">vMix</span>
+              <span class="tag">Adobe Photoshop</span>
+              <span class="tag">Live Broadcast</span>
+              <span class="tag">Team Coordination</span>
+            </div>
+          </div>
         </div>
+      </section>
+
+      <!-- PROJECTS -->
+      <section id="projects" aria-label="Notable projects">
+        <span class="subheader-text">My Work / Projects</span>
+        <div class="projects-container">
+          <div class="project-card">
+            <div class="project-color-bar" style="--ph-color: #1a1a2e"></div>
+            <div class="project-card-text-container">
+              <div class="project-card-header">
+                <div class="project-meta">
+                  AI Platform &nbsp;/&nbsp; Oct 2025 – Present
+                </div>
+                <span class="project-title">Tender Intelligence</span>
+              </div>
+              <p class="body-text project-card-text">
+                Designed and developed an AI platform for automated procurement
+                document analysis and product fulfillment search. Built
+                pipelines for ingesting tenders and supplier price lists, using
+                LLMs to extract structured information and enable agentic search
+                for best-fit items for automated bid drafting.
+              </p>
+              <div class="tag-row">
+                <span class="tag">Python</span>
+                <span class="tag">LLMs</span>
+                <span class="tag">Agents</span>
+                <span class="tag">RAG</span>
+                <span class="tag">FastAPI</span>
+                <span class="tag-more-wrapper">
+                  <button class="tag tag-more" aria-expanded="false">
+                    +3 more
+                  </button>
+                  <div class="tag-popover" hidden>
+                    <span class="tag">Docker</span>
+                    <span class="tag">PostgreSQL</span>
+                    <span class="tag">On-premise</span>
+                  </div>
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-color-bar" style="--ph-color: #0d2137"></div>
+            <div class="project-card-text-container">
+              <div class="project-card-header">
+                <div class="project-meta">
+                  Web App &nbsp;/&nbsp; Sep 2022 – Jan 2024
+                </div>
+                <span class="project-title">Showlifter</span>
+              </div>
+              <p class="body-text project-card-text">
+                Real-time web app focused on enhancing viewer experience at live
+                sports events and boosting user engagement. Client and Admin
+                parts written in SvelteKit, with Firebase for both hosting and
+                backend-as-a-service.
+              </p>
+              <div class="tag-row">
+                <span class="tag">SvelteKit</span>
+                <span class="tag">Firebase</span>
+                <span class="tag">TypeScript</span>
+                <span class="tag">Real-time</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-color-bar" style="--ph-color: #0f2818"></div>
+            <div class="project-card-text-container">
+              <div class="project-card-header">
+                <div class="project-meta">
+                  Android App &nbsp;/&nbsp; May 2020 – Aug 2020
+                </div>
+                <span class="project-title">Species Collector</span>
+              </div>
+              <p class="body-text project-card-text">
+                Offline mobile tool for recording vegetation samples for the
+                global botanist community. Built solo as a freelance project
+                with Java for Android — including publishing on Google Play.
+              </p>
+              <div class="tag-row">
+                <span class="tag">Android</span>
+                <span class="tag">Java</span>
+                <span class="tag">SQLite</span>
+                <span class="tag">Offline-first</span>
+                <span class="tag">Google Play</span>
+                <span class="tag-more-wrapper">
+                  <button class="tag tag-more" aria-expanded="false">
+                    +1 more
+                  </button>
+                  <div class="tag-popover" hidden>
+                    <span class="tag">Freelance</span>
+                  </div>
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-color-bar" style="--ph-color: #1f1200"></div>
+            <div class="project-card-text-container">
+              <div class="project-card-header">
+                <div class="project-meta">
+                  Android App &nbsp;/&nbsp; Apr 2019 – Aug 2019
+                </div>
+                <span class="project-title">iBees</span>
+              </div>
+              <p class="body-text project-card-text">
+                Quizzing tool for Czech schools using custom matrix barcode
+                detection in real time. Developed solo with Java for Android and
+                the OpenCV library. Development halted due to lack of government
+                funding.
+              </p>
+              <div class="tag-row">
+                <span class="tag">Android</span>
+                <span class="tag">Java</span>
+                <span class="tag">OpenCV</span>
+                <span class="tag">Computer Vision</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- EDUCATION -->
+      <section id="education" aria-label="Education">
+        <span class="subheader-text">My Background / Education</span>
+        <div class="experience-list">
+          <div class="experience-item">
+            <div class="experience-meta">
+              <span class="experience-period">Oct 2019 – Jun 2022</span>
+              <span class="experience-sep" aria-hidden="true">/</span>
+              <span class="experience-org">VUT Brno</span>
+            </div>
+            <h3 class="experience-title">
+              Bachelor's — Information Technologies
+            </h3>
+            <p class="body-text">
+              Faculty of Information Technology, Department of Computer Graphics
+              and Multimedia. Thesis:
+              <a
+                class="inline-link"
+                href="https://www.fit.vut.cz/study/thesis/25132/.en"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Photo Noise Reduction Using Deep Neural Networks</a
+              >
+              — comparing DnCNN and BRDNet denoising approaches and their
+              correlation with perceived visual quality.
+            </p>
+          </div>
+
+          <div class="experience-item">
+            <div class="experience-meta">
+              <span class="experience-period">Sep 2011 – Jun 2019</span>
+              <span class="experience-sep" aria-hidden="true">/</span>
+              <span class="experience-org">Gymnázium Tišnov</span>
+            </div>
+            <h3 class="experience-title">Grammar School</h3>
+            <p class="body-text">
+              Successfully finished with a graduation exam (maturita).
+            </p>
+          </div>
+        </div>
+      </section>
     </div>
 
     <!-- FOOTER -->
-    <div id="footer">
-        <a class="icon-link" target="_blank" href="https://github.com/yourusername">
-            <span class="footer-icon">GitHub</span>
-        </a>
-        <a class="icon-link" target="_blank" href="https://linkedin.com/in/yourprofile">
-            <span class="footer-icon">LinkedIn</span>
-        </a>
-        <a class="icon-link" href="mailto:your.email@example.com">
-            <span class="footer-icon">Email</span>
-        </a>
-    </div>
+    <footer id="footer" role="contentinfo">
+      <a
+        class="icon-link"
+        href="https://github.com/JondaGit"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="GitHub profile"
+        >GitHub</a
+      >
+      <a
+        class="icon-link"
+        href="https://www.linkedin.com/in/jon%C3%A1%C5%A1-tich%C3%BD-436128239/"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="LinkedIn profile"
+        >LinkedIn</a
+      >
+      <a
+        class="icon-link"
+        href="mailto:jon.tich@volny.cz"
+        aria-label="Send email"
+        >jon.tich@volny.cz</a
+      >
+    </footer>
 
-</body>
+    <div id="made-by">Made by Jonáš Tichý with the help of Mistral Vibe &amp; Claude Code</div>
+
+    <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+      ↑
+    </button>
+
+    <script src="script.js"></script>
+  </body>
 </html>

@@ -1,36 +1,61 @@
-// Scroll to top functionality
-document.addEventListener('DOMContentLoaded', function() {
-    const scrollToTopBtn = document.createElement('button');
-    scrollToTopBtn.className = 'scroll-to-top';
-    scrollToTopBtn.innerHTML = '↑';
-    scrollToTopBtn.title = 'Scroll to top';
-    document.body.appendChild(scrollToTopBtn);
+// ============================================
+// NAV SCROLL EFFECT
+// ============================================
+const navbar = document.getElementById('navbar');
 
-    window.addEventListener('scroll', function() {
-        if (window.pageYOffset > 300) {
-            scrollToTopBtn.classList.add('show');
-        } else {
-            scrollToTopBtn.classList.remove('show');
-        }
-    });
+window.addEventListener('scroll', () => {
+  navbar.classList.toggle('scrolled', window.scrollY > 40);
+}, { passive: true });
 
-    scrollToTopBtn.addEventListener('click', function() {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
-    });
+// ============================================
+// SCROLL TO TOP
+// ============================================
+const scrollTopBtn = document.getElementById('scrollTop');
 
-    // Add smooth scrolling for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth'
-                });
-            }
-        });
-    });
+window.addEventListener('scroll', () => {
+  scrollTopBtn.classList.toggle('visible', window.scrollY > 400);
+}, { passive: true });
+
+scrollTopBtn.addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+// ============================================
+// TAG POPOVERS
+// ============================================
+document.querySelectorAll('.tag-more').forEach(btn => {
+  const popover = btn.nextElementSibling;
+
+  btn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const isOpen = !popover.hidden;
+    // Close all others first
+    document.querySelectorAll('.tag-popover').forEach(p => { p.hidden = true; });
+    document.querySelectorAll('.tag-more').forEach(b => b.setAttribute('aria-expanded', 'false'));
+    // Toggle this one
+    popover.hidden = isOpen;
+    btn.setAttribute('aria-expanded', String(!isOpen));
+  });
+});
+
+document.addEventListener('click', () => {
+  document.querySelectorAll('.tag-popover').forEach(p => { p.hidden = true; });
+  document.querySelectorAll('.tag-more').forEach(b => b.setAttribute('aria-expanded', 'false'));
+});
+
+// ============================================
+// SMOOTH ANCHOR SCROLLING (offset for fixed nav)
+// ============================================
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', (e) => {
+    const href = anchor.getAttribute('href');
+    if (href === '#') return;
+    const target = document.querySelector(href);
+    if (target) {
+      e.preventDefault();
+      const offset = navbar.offsetHeight + 24;
+      const top = target.getBoundingClientRect().top + window.scrollY - offset;
+      window.scrollTo({ top, behavior: 'smooth' });
+    }
+  });
 });
