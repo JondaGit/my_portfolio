@@ -4,7 +4,9 @@
       "WebFetch(domain:ndoherty-xyz.github.io)",
       "WebFetch(domain:raw.githubusercontent.com)",
       "Bash(python3:*)",
-      "WebFetch(domain:www.fit.vut.cz)"
+      "WebFetch(domain:www.fit.vut.cz)",
+      "Bash(cp *obrazovky*:*)",
+      "Bash(rm *obrazovky*:*)"
     ]
   }
 }
