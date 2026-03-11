@@ -3,34 +3,50 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Species Collector — Android app for vegetation sampling by Jonáš Tichý." />
+    <meta
+      name="description"
+      content="Species Collector — Android app for vegetation sampling by Jonáš Tichý."
+    />
     <title>Species Collector | Jonáš Tichý</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="../style.css" />
   </head>
   <body>
     <a class="skip-link" href="#main-content">Skip to main content</a>
 
-    <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+    <nav
+      class="navbar"
+      id="navbar"
+      role="navigation"
+      aria-label="Main navigation"
+    >
       <div class="nav-links">
         <a class="nav-link" href="../index.html#about">About</a>
         <a class="nav-link" href="../index.html#experience">Experience</a>
         <a class="nav-link" href="../index.html#projects">Projects</a>
         <a class="nav-link" href="../index.html#education">Education</a>
       </div>
-      <a class="button" href="mailto:jon.tich@volny.cz" aria-label="Send email to Jonáš Tichý">
+      <a
+        class="button"
+        href="mailto:jon.tich@volny.cz"
+        aria-label="Send email to Jonáš Tichý"
+      >
         <span class="button-text">Contact Me</span>
       </a>
     </nav>
 
     <div id="main-content">
-
       <a class="back-link" href="../index.html#projects">← Back to projects</a>
 
       <div class="project-page-header">
-        <div class="project-meta">Android App &nbsp;/&nbsp; May 2020 – Aug 2020</div>
+        <div class="project-meta">
+          Android App &nbsp;/&nbsp; May 2020 – Aug 2020
+        </div>
         <h1 class="main-title">Species Collector</h1>
         <div class="tag-row">
           <span class="tag">Android</span>
@@ -44,37 +60,142 @@
 
       <div class="project-page-section">
         <span class="subheader-text">Overview</span>
-        <p class="body-text">Offline mobile tool for recording vegetation samples, designed for botanists and field researchers worldwide. Built as a solo freelance project for the Czech Academy of Sciences and published on Google Play.</p>
+        <p class="body-text">
+          Offline mobile tool for recording vegetation samples, designed for
+          botanists and field researchers worldwide. Enables offline recording
+          of vegetation samples, their editing, and export. Built as a solo
+          freelance project for the Czech Academy of Sciences and published on
+          Google Play.
+        </p>
       </div>
 
       <div class="project-page-section">
         <span class="subheader-text">What it does</span>
-        <p class="body-text">Allows botanists to record detailed vegetation samples in the field without requiring an internet connection. All data is stored locally in SQLite and can be exported for analysis. Built entirely in Java for Android, covering the full project lifecycle — from requirements through development, testing, and publishing on Google Play.</p>
+        <p class="body-text">
+          Allows botanists to record detailed vegetation samples in the field
+          without requiring an internet connection. All data is stored locally
+          on device and can be exported for further analysis. Built entirely in
+          Java for Android, covering the full project lifecycle — from
+          requirements through development, testing, and publishing on Google
+          Play.
+        </p>
       </div>
 
       <div class="project-page-section">
         <span class="subheader-text">Screenshots</span>
-        <div class="screenshot-grid">
-          <div class="screenshot-placeholder full-width">Main collection screen — replace with screenshot</div>
-          <div class="screenshot-placeholder">Sample entry form — replace with screenshot</div>
-          <div class="screenshot-placeholder">Export view — replace with screenshot</div>
+        <div class="screenshot-grid screenshot-grid-3col">
+          <figure class="screenshot-figure">
+            <img
+              class="screenshot-img"
+              src="../assets/projects/species-collector/sc1.webp"
+              alt="Species Collector home screen with tree logo and main navigation buttons: Walks, Modules, Templates, and Export"
+            />
+            <figcaption class="screenshot-caption">
+              Home screen — main navigation with Walks, Modules, Templates, and
+              Export
+            </figcaption>
+          </figure>
+          <figure class="screenshot-figure">
+            <img
+              class="screenshot-img"
+              src="../assets/projects/species-collector/sc2.webp"
+              alt="New walk creation form with fields for name, location, notes, date, and template selection"
+            />
+            <figcaption class="screenshot-caption">
+              Create walk — set up a new field session with location, date, and
+              template
+            </figcaption>
+          </figure>
+          <figure class="screenshot-figure">
+            <img
+              class="screenshot-img"
+              src="../assets/projects/species-collector/sc3.webp"
+              alt="Advanced walk settings showing species library with 1946 species, and configurable data modules for propagation, vegetation, and habitat"
+            />
+            <figcaption class="screenshot-caption">
+              Walk configuration — species library and customisable data
+              collection modules
+            </figcaption>
+          </figure>
+          <figure class="screenshot-figure">
+            <img
+              class="screenshot-img"
+              src="../assets/projects/species-collector/sc4.webp"
+              alt="New record form with species selector, colour-coded labels, photo capture, and live GPS coordinates"
+            />
+            <figcaption class="screenshot-caption">
+              Record entry — species selection, labels, photo capture, and GPS
+              tracking
+            </figcaption>
+          </figure>
+          <figure class="screenshot-figure">
+            <img
+              class="screenshot-img"
+              src="../assets/projects/species-collector/sc5.webp"
+              alt="CSV export screen with file naming, export type selection, delimiter options, and locality filter"
+            />
+            <figcaption class="screenshot-caption">
+              CSV export — configurable data export with delimiter and locality
+              filters
+            </figcaption>
+          </figure>
         </div>
       </div>
-
     </div>
 
     <footer id="footer" role="contentinfo">
-      <a class="icon-link" href="https://github.com/JondaGit" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">GitHub</a>
-      <a class="icon-link" href="https://www.linkedin.com/in/jon%C3%A1%C5%A1-tich%C3%BD-436128239/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">LinkedIn</a>
+      <a
+        class="icon-link"
+        href="https://github.com/JondaGit"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="GitHub profile"
+        >GitHub</a
+      >
+      <a
+        class="icon-link"
+        href="https://www.linkedin.com/in/jon%C3%A1%C5%A1-tich%C3%BD-436128239/"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="LinkedIn profile"
+        >LinkedIn</a
+      >
       <span class="footer-email-group">
-        <a class="icon-link" href="mailto:jon.tich@volny.cz" aria-label="Send email">Email</a>
-        <button class="copy-email-btn" id="copyEmailBtn" aria-label="Copy email address" data-email="jon.tich@volny.cz">copy</button>
+        <a
+          class="icon-link"
+          href="mailto:jon.tich@volny.cz"
+          aria-label="Send email"
+          >Email</a
+        >
+        <button
+          class="copy-email-btn"
+          id="copyEmailBtn"
+          aria-label="Copy email address"
+          data-email="jon.tich@volny.cz"
+        >
+          copy
+        </button>
       </span>
     </footer>
 
-    <div id="made-by">Made by Jonáš Tichý with the help of Mistral Vibe &amp; Claude Code</div>
+    <div id="made-by">
+      Made by Jonáš Tichý with the help of Mistral Vibe &amp; Claude Code
+    </div>
 
-    <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">↑</button>
+    <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+      ↑
+    </button>
+
+    <div
+      id="lightbox"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Image lightbox"
+    >
+      <img id="lightbox-img" src="" alt="" />
+      <p id="lightbox-caption"></p>
+      <button id="lightbox-close" aria-label="Close lightbox">close ✕</button>
+    </div>
 
     <script src="../script.js"></script>
   </body>

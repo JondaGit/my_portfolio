@@ -1,7 +1,9 @@
 /* ============================================
    BASE RESET
    ============================================ */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -14,7 +16,7 @@ html {
 }
 
 body {
-  font-family: 'IBM Plex Mono', 'Courier New', monospace;
+  font-family: "IBM Plex Mono", "Courier New", monospace;
   background-color: #ffffff;
   color: #111111;
   line-height: 1.6;
@@ -24,10 +26,25 @@ body {
   overflow-x: hidden;
 }
 
-a { color: inherit; text-decoration: none; }
-ul, ol { list-style: none; }
-button { border: none; background: none; cursor: pointer; font: inherit; color: inherit; }
-img, svg { display: block; }
+a {
+  color: inherit;
+  text-decoration: none;
+}
+ul,
+ol {
+  list-style: none;
+}
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font: inherit;
+  color: inherit;
+}
+img,
+svg {
+  display: block;
+}
 
 /* ============================================
    SKIP LINK
@@ -45,7 +62,9 @@ img, svg { display: block; }
   font-weight: 600;
   transition: top 0.2s;
 }
-.skip-link:focus { top: 1rem; }
+.skip-link:focus {
+  top: 1rem;
+}
 
 /* ============================================
    NAVBAR
@@ -64,7 +83,9 @@ img, svg { display: block; }
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid transparent;
-  transition: border-color 0.25s ease, padding 0.25s ease;
+  transition:
+    border-color 0.25s ease,
+    padding 0.25s ease;
 }
 
 .navbar.scrolled {
@@ -85,7 +106,9 @@ img, svg { display: block; }
   letter-spacing: 0.02em;
   transition: color 0.15s ease;
 }
-.nav-link:hover { color: #111; }
+.nav-link:hover {
+  color: #111;
+}
 
 /* ============================================
    BUTTONS
@@ -103,7 +126,9 @@ img, svg { display: block; }
   color: #111111;
   text-decoration: none;
   background: transparent;
-  transition: background 0.15s ease, color 0.15s ease;
+  transition:
+    background 0.15s ease,
+    color 0.15s ease;
   cursor: pointer;
   white-space: nowrap;
 }
@@ -123,7 +148,9 @@ img, svg { display: block; }
   border-color: #111;
 }
 
-.button-text { line-height: 1; }
+.button-text {
+  line-height: 1;
+}
 
 .arrow-icon {
   font-size: 14px;
@@ -131,7 +158,9 @@ img, svg { display: block; }
   display: inline-block;
   transition: transform 0.15s ease;
 }
-.button:hover .arrow-icon { transform: translateY(2px); }
+.button:hover .arrow-icon {
+  transform: translateY(2px);
+}
 
 /* ============================================
    MAIN LAYOUT
@@ -284,7 +313,9 @@ img, svg { display: block; }
   border-radius: 50px;
   white-space: nowrap;
   cursor: pointer;
-  transition: color 0.15s ease, border-color 0.15s ease;
+  transition:
+    color 0.15s ease,
+    border-color 0.15s ease;
 }
 .tag-more:hover,
 .tag-more[aria-expanded="true"] {
@@ -307,7 +338,9 @@ img, svg { display: block; }
   z-index: 50;
   box-shadow: 3px 3px 0 #111;
 }
-.tag-popover[hidden] { display: none; }
+.tag-popover[hidden] {
+  display: none;
+}
 
 /* ============================================
    EXPERIENCE
@@ -372,7 +405,9 @@ img, svg { display: block; }
   text-decoration: underline;
   text-underline-offset: 2px;
 }
-.inline-link:hover { opacity: 0.6; }
+.inline-link:hover {
+  opacity: 0.6;
+}
 
 .experience-item .tag-row {
   margin-top: 4px;
@@ -401,13 +436,17 @@ img, svg { display: block; }
   overflow: hidden;
   transition: background 0.15s ease;
 }
-.project-card:hover { background: #f9f9f9; }
+.project-card:hover {
+  background: #f9f9f9;
+}
 
 .project-card-placeholder {
   border-color: #ddd;
   opacity: 0.6;
 }
-.project-card-placeholder:hover { background: transparent; }
+.project-card-placeholder:hover {
+  background: transparent;
+}
 
 .project-card-text-container {
   display: flex;
@@ -445,7 +484,10 @@ img, svg { display: block; }
   line-height: 1.65;
 }
 
-.project-card .tag-row { margin-top: auto; padding-top: 8px; }
+.project-card .tag-row {
+  margin-top: auto;
+  padding-top: 8px;
+}
 
 /* ============================================
    FOOTER
@@ -467,7 +509,9 @@ img, svg { display: block; }
   transition: color 0.15s ease;
   letter-spacing: 0.04em;
 }
-.icon-link:hover { color: #111; }
+.icon-link:hover {
+  color: #111;
+}
 
 .footer-email-group {
   display: inline-flex;
@@ -484,10 +528,18 @@ img, svg { display: block; }
   border: 1.5px solid #ddd;
   border-radius: 50px;
   cursor: pointer;
-  transition: color 0.15s ease, border-color 0.15s ease;
+  transition:
+    color 0.15s ease,
+    border-color 0.15s ease;
 }
-.copy-email-btn:hover { color: #111; border-color: #111; }
-.copy-email-btn.copied { color: #22c55e; border-color: #22c55e; }
+.copy-email-btn:hover {
+  color: #111;
+  border-color: #111;
+}
+.copy-email-btn.copied {
+  color: #22c55e;
+  border-color: #22c55e;
+}
 
 /* ============================================
    PROJECT PAGES
@@ -502,7 +554,9 @@ img, svg { display: block; }
   margin-bottom: 48px;
   transition: color 0.15s ease;
 }
-.back-link:hover { color: #111; }
+.back-link:hover {
+  color: #111;
+}
 
 .project-page-header {
   display: flex;
@@ -529,6 +583,10 @@ img, svg { display: block; }
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
   gap: 16px;
+}
+
+.screenshot-grid-3col {
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .screenshot-placeholder {
@@ -596,7 +654,7 @@ img, svg { display: block; }
   bottom: 28px;
   left: 50%;
   transform: translateX(-50%);
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: "IBM Plex Mono", monospace;
   font-size: 0.8rem;
   color: rgba(255, 255, 255, 0.7);
   white-space: nowrap;
@@ -610,7 +668,7 @@ img, svg { display: block; }
   background: none;
   border: 1px solid rgba(255, 255, 255, 0.35);
   color: #fff;
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: "IBM Plex Mono", monospace;
   font-size: 0.8rem;
   padding: 6px 14px;
   border-radius: 50px;
@@ -634,7 +692,7 @@ img, svg { display: block; }
   font-size: 0.78rem;
   color: #888;
   margin-top: 8px;
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: "IBM Plex Mono", monospace;
 }
 
 .project-page-card-link {
@@ -647,11 +705,20 @@ img, svg { display: block; }
   margin-top: 8px;
   transition: color 0.15s ease;
 }
-.project-page-card-link:hover { color: #111; }
+.project-page-card-link:hover {
+  color: #111;
+}
 
 @media (max-width: 700px) {
-  .screenshot-grid { grid-template-columns: 1fr; }
-  .screenshot-placeholder.full-width { aspect-ratio: 16 / 9; }
+  .screenshot-grid {
+    grid-template-columns: 1fr;
+  }
+  .screenshot-grid-3col {
+    grid-template-columns: 1fr;
+  }
+  .screenshot-placeholder.full-width {
+    aspect-ratio: 16 / 9;
+  }
 }
 
 /* ============================================
@@ -691,14 +758,21 @@ img, svg { display: block; }
   opacity: 0;
   transform: translateY(8px);
   pointer-events: none;
-  transition: opacity 0.25s ease, transform 0.25s ease, background 0.15s ease, color 0.15s ease;
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease,
+    background 0.15s ease,
+    color 0.15s ease;
 }
 .scroll-top.visible {
   opacity: 1;
   transform: translateY(0);
   pointer-events: all;
 }
-.scroll-top:hover { background: #111; color: #fff; }
+.scroll-top:hover {
+  background: #111;
+  color: #fff;
+}
 
 /* ============================================
    FOCUS
@@ -715,17 +789,37 @@ img, svg { display: block; }
 
 /* Large screens */
 @media (max-width: 1200px) {
-  #main-content { padding-left: 40px; padding-right: 40px; }
-  .navbar { padding-left: 40px; padding-right: 40px; }
-  #footer { padding-left: 40px; padding-right: 40px; }
+  #main-content {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  .navbar {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  #footer {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
 }
 
 /* Medium screens */
 @media (max-width: 900px) {
-  .nav-links { display: none; }
-  #main-content { padding-left: 30px; padding-right: 30px; }
-  .navbar { padding-left: 30px; padding-right: 30px; }
-  #footer { padding-left: 30px; padding-right: 30px; }
+  .nav-links {
+    display: none;
+  }
+  #main-content {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .navbar {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  #footer {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
 }
 
 /* Tablet */
@@ -734,18 +828,35 @@ img, svg { display: block; }
     padding: 130px 24px 60px;
     gap: 64px;
   }
-  .navbar { padding: 20px 24px; }
-  .navbar.scrolled { padding: 16px 24px; }
-  #footer { padding: 24px; gap: 24px; }
+  .navbar {
+    padding: 20px 24px;
+  }
+  .navbar.scrolled {
+    padding: 16px 24px;
+  }
+  #footer {
+    padding: 24px;
+    gap: 24px;
+  }
 
-  .main-title { letter-spacing: -0.02em; }
-  .projects-container { grid-template-columns: 1fr; }
+  .main-title {
+    letter-spacing: -0.02em;
+  }
+  .projects-container {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* Mobile */
 @media (max-width: 480px) {
-  .hero-actions { flex-direction: column; align-items: flex-start; }
-  .scroll-top { bottom: 1.25rem; right: 1.25rem; }
+  .hero-actions {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .scroll-top {
+    bottom: 1.25rem;
+    right: 1.25rem;
+  }
 }
 
 /* Hero photo stacks on small screens */

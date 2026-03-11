@@ -3,34 +3,50 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="iBees — Android quizzing app with real-time barcode detection by Jonáš Tichý." />
+    <meta
+      name="description"
+      content="iBees — Android quizzing app with real-time barcode detection by Jonáš Tichý."
+    />
     <title>iBees | Jonáš Tichý</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="../style.css" />
   </head>
   <body>
     <a class="skip-link" href="#main-content">Skip to main content</a>
 
-    <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+    <nav
+      class="navbar"
+      id="navbar"
+      role="navigation"
+      aria-label="Main navigation"
+    >
       <div class="nav-links">
         <a class="nav-link" href="../index.html#about">About</a>
         <a class="nav-link" href="../index.html#experience">Experience</a>
         <a class="nav-link" href="../index.html#projects">Projects</a>
         <a class="nav-link" href="../index.html#education">Education</a>
       </div>
-      <a class="button" href="mailto:jon.tich@volny.cz" aria-label="Send email to Jonáš Tichý">
+      <a
+        class="button"
+        href="mailto:jon.tich@volny.cz"
+        aria-label="Send email to Jonáš Tichý"
+      >
         <span class="button-text">Contact Me</span>
       </a>
     </nav>
 
     <div id="main-content">
-
       <a class="back-link" href="../index.html#projects">← Back to projects</a>
 
       <div class="project-page-header">
-        <div class="project-meta">Android App &nbsp;/&nbsp; Apr 2019 – Aug 2019</div>
+        <div class="project-meta">
+          Android App &nbsp;/&nbsp; Apr 2019 – Aug 2019
+        </div>
         <h1 class="main-title">iBees</h1>
         <div class="tag-row">
           <span class="tag">Android</span>
@@ -42,38 +58,126 @@
 
       <div class="project-page-section">
         <span class="subheader-text">Overview</span>
-        <p class="body-text">Quizzing tool for Czech primary schools, built around a custom real-time matrix barcode detection system. Students scan physical cards with their device camera to answer quiz questions, making classroom interaction more engaging. Developed solo using Java for Android and the OpenCV library.</p>
-        <p class="body-text">Development was halted due to lack of government funding, but the working prototype demonstrated reliable real-time barcode recognition.</p>
+        <p class="body-text">
+          Quizzing tool for Czech primary schools, built around a custom
+          real-time matrix barcode detection system. Students scan physical
+          cards with their device camera to answer quiz questions, making
+          classroom interaction more engaging. Developed solo using Java for
+          Android and the OpenCV library.
+        </p>
+        <p class="body-text">
+          Development was halted due to lack of government funding, but the
+          working prototype demonstrated reliable real-time custom barcode
+          recognition.
+        </p>
       </div>
 
       <div class="project-page-section">
         <span class="subheader-text">What it does</span>
-        <p class="body-text">The app uses the device camera and a custom OpenCV-based pipeline to detect and decode matrix barcodes in real time — without relying on standard QR code formats. Teachers set up quiz sessions, students scan answer cards, and results are tallied instantly. The custom barcode format allowed physical cards to be printed cheaply for classroom distribution.</p>
+        <p class="body-text">
+          The app uses the device camera and a custom OpenCV-based pipeline to
+          detect and decode matrix barcodes in real time. Teachers set up quiz
+          sessions, students answer by showing the bar code oriented such that
+          their answer is at the top (A,B,C,D style questions), and results are
+          scanned back by the teacher's device. The app POC was developed and
+          it's functionality was successfully demonstrated on a sample
+          real-world audience.
+        </p>
       </div>
 
       <div class="project-page-section">
         <span class="subheader-text">Screenshots</span>
         <div class="screenshot-grid">
-          <div class="screenshot-placeholder full-width">Quiz interface — replace with screenshot</div>
-          <div class="screenshot-placeholder">Barcode detection in action — replace with screenshot</div>
-          <div class="screenshot-placeholder">Results screen — replace with screenshot</div>
+          <figure class="screenshot-figure full-width">
+            <img
+              class="screenshot-img"
+              src="../assets/projects/ibees/ibees-01.webp"
+              alt="Classroom with desks and computers, showing a detected barcode card with bounding box and ID overlay"
+            />
+            <figcaption class="screenshot-caption">
+              Classroom detection — barcode card recognised in a real school
+              environment
+            </figcaption>
+          </figure>
+          <figure class="screenshot-figure">
+            <img
+              class="screenshot-img"
+              src="../assets/projects/ibees/ibees-02.webp"
+              alt="Six custom black-and-white matrix barcode patterns used as answer cards"
+            />
+            <figcaption class="screenshot-caption">
+              Custom barcode set — printable answer cards with unique matrix
+              patterns
+            </figcaption>
+          </figure>
+          <figure class="screenshot-figure">
+            <img
+              class="screenshot-img"
+              src="../assets/projects/ibees/ibees-03.webp"
+              alt="Outdoor camera view with real-time barcode detection overlay showing question number and detected card ID"
+            />
+            <figcaption class="screenshot-caption">
+              Live detection — real-time barcode recognition through the device
+              camera
+            </figcaption>
+          </figure>
         </div>
       </div>
-
     </div>
 
     <footer id="footer" role="contentinfo">
-      <a class="icon-link" href="https://github.com/JondaGit" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">GitHub</a>
-      <a class="icon-link" href="https://www.linkedin.com/in/jon%C3%A1%C5%A1-tich%C3%BD-436128239/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">LinkedIn</a>
+      <a
+        class="icon-link"
+        href="https://github.com/JondaGit"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="GitHub profile"
+        >GitHub</a
+      >
+      <a
+        class="icon-link"
+        href="https://www.linkedin.com/in/jon%C3%A1%C5%A1-tich%C3%BD-436128239/"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="LinkedIn profile"
+        >LinkedIn</a
+      >
       <span class="footer-email-group">
-        <a class="icon-link" href="mailto:jon.tich@volny.cz" aria-label="Send email">Email</a>
-        <button class="copy-email-btn" id="copyEmailBtn" aria-label="Copy email address" data-email="jon.tich@volny.cz">copy</button>
+        <a
+          class="icon-link"
+          href="mailto:jon.tich@volny.cz"
+          aria-label="Send email"
+          >Email</a
+        >
+        <button
+          class="copy-email-btn"
+          id="copyEmailBtn"
+          aria-label="Copy email address"
+          data-email="jon.tich@volny.cz"
+        >
+          copy
+        </button>
       </span>
     </footer>
 
-    <div id="made-by">Made by Jonáš Tichý with the help of Mistral Vibe &amp; Claude Code</div>
+    <div id="made-by">
+      Made by Jonáš Tichý with the help of Mistral Vibe &amp; Claude Code
+    </div>
 
-    <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">↑</button>
+    <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+      ↑
+    </button>
+
+    <div
+      id="lightbox"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Image lightbox"
+    >
+      <img id="lightbox-img" src="" alt="" />
+      <p id="lightbox-caption"></p>
+      <button id="lightbox-close" aria-label="Close lightbox">close ✕</button>
+    </div>
 
     <script src="../script.js"></script>
   </body>

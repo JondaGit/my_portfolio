@@ -3,34 +3,50 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Showlifter — real-time web app for live sports events by Jonáš Tichý." />
+    <meta
+      name="description"
+      content="Showlifter — real-time web app for live sports events by Jonáš Tichý."
+    />
     <title>Showlifter | Jonáš Tichý</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="../style.css" />
   </head>
   <body>
     <a class="skip-link" href="#main-content">Skip to main content</a>
 
-    <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+    <nav
+      class="navbar"
+      id="navbar"
+      role="navigation"
+      aria-label="Main navigation"
+    >
       <div class="nav-links">
         <a class="nav-link" href="../index.html#about">About</a>
         <a class="nav-link" href="../index.html#experience">Experience</a>
         <a class="nav-link" href="../index.html#projects">Projects</a>
         <a class="nav-link" href="../index.html#education">Education</a>
       </div>
-      <a class="button" href="mailto:jon.tich@volny.cz" aria-label="Send email to Jonáš Tichý">
+      <a
+        class="button"
+        href="mailto:jon.tich@volny.cz"
+        aria-label="Send email to Jonáš Tichý"
+      >
         <span class="button-text">Contact Me</span>
       </a>
     </nav>
 
     <div id="main-content">
-
       <a class="back-link" href="../index.html#projects">← Back to projects</a>
 
       <div class="project-page-header">
-        <div class="project-meta">Web App &nbsp;/&nbsp; Sep 2022 – Jan 2024</div>
+        <div class="project-meta">
+          Web App &nbsp;/&nbsp; Sep 2022 – Jan 2024
+        </div>
         <h1 class="main-title">Showlifter</h1>
         <div class="tag-row">
           <span class="tag">SvelteKit</span>
@@ -42,37 +58,188 @@
 
       <div class="project-page-section">
         <span class="subheader-text">Overview</span>
-        <p class="body-text">Real-time web app focused on enhancing the viewer experience at live sports events and boosting audience engagement. Designed for both event operators and spectators, with separate Client and Admin interfaces.</p>
+        <p class="body-text">
+          Real-time web app focused on enhancing the viewer experience at live
+          sports events and boosting audience engagement. Designed for both
+          event operators and spectators, with separate Client and Admin
+          interfaces.
+        </p>
+        <p class="body-text">
+          Product page:
+          <a
+            class="inline-link"
+            href="https://showlifter.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >showlifter.com</a
+          >
+        </p>
       </div>
 
       <div class="project-page-section">
         <span class="subheader-text">What it does</span>
-        <p class="body-text">The Client part gives spectators a live-updating event view — scores, stats, and highlights pushed in real time. The Admin part allows event operators to manage and broadcast updates during the event. Both parts are built in SvelteKit, with Firebase handling hosting, authentication, and real-time data synchronisation as backend-as-a-service.</p>
+        <p class="body-text">
+          The Client part gives spectators an option to participate in live
+          contests and activities, such as quizzes, polls, light shows, and
+          more. The Admin part allows event operators to manage all activities,
+          draw winners, and monitor participation. Both parts are built in
+          SvelteKit, with Firebase handling hosting, authentication, and
+          real-time data synchronisation as backend-as-a-service.
+        </p>
       </div>
 
       <div class="project-page-section">
         <span class="subheader-text">Screenshots</span>
-        <div class="screenshot-grid">
-          <div class="screenshot-placeholder full-width">Spectator view — replace with screenshot</div>
-          <div class="screenshot-placeholder">Admin panel — replace with screenshot</div>
-          <div class="screenshot-placeholder">Live event feed — replace with screenshot</div>
+        <div class="screenshot-grid screenshot-grid-3col">
+          <figure class="screenshot-figure">
+            <img
+              class="screenshot-img"
+              src="../assets/projects/showlifter/sl-phones.webp"
+              alt="Two phones showing the Showlifter login screen and team selection for a VUT vs MUNI university hockey match"
+            />
+            <figcaption class="screenshot-caption">
+              Login and team selection — spectators pick their side at game
+              start
+            </figcaption>
+          </figure>
+          <figure class="screenshot-figure">
+            <img
+              class="screenshot-img"
+              src="../assets/projects/showlifter/sl-scr01.webp"
+              alt="User profile screen showing Google login, user ID, and after-party event banner"
+            />
+            <figcaption class="screenshot-caption">
+              User profile — Google auth, unique spectator ID, and event
+              promotions
+            </figcaption>
+          </figure>
+          <figure class="screenshot-figure">
+            <img
+              class="screenshot-img"
+              src="../assets/projects/showlifter/sl-scr02.webp"
+              alt="Main contest page with Decathlon sponsor, list of interactive activities, and prize draw"
+            />
+            <figcaption class="screenshot-caption">
+              Contest hub — sponsor activities, quizzes, and prize draws
+            </figcaption>
+          </figure>
+          <figure class="screenshot-figure">
+            <img
+              class="screenshot-img"
+              src="../assets/projects/showlifter/sl-scr03.webp"
+              alt="Best player voting screen with four hockey player cards to choose from"
+            />
+            <figcaption class="screenshot-caption">
+              Best Player vote — tap to vote for the match MVP
+            </figcaption>
+          </figure>
+          <figure class="screenshot-figure">
+            <img
+              class="screenshot-img"
+              src="../assets/projects/showlifter/sl-scr04.webp"
+              alt="Attendance guessing game with number input and Wolt sponsor branding"
+            />
+            <figcaption class="screenshot-caption">
+              Attendance guess — predict the crowd size to win prizes
+            </figcaption>
+          </figure>
+          <figure class="screenshot-figure">
+            <img
+              class="screenshot-img"
+              src="../assets/projects/showlifter/sl-scr05.webp"
+              alt="Activity list showing completed and available contests with green join buttons"
+            />
+            <figcaption class="screenshot-caption">
+              Activity dashboard — track progress across all event activities
+            </figcaption>
+          </figure>
+          <figure class="screenshot-figure">
+            <img
+              class="screenshot-img"
+              src="../assets/projects/showlifter/sl-scr06.webp"
+              alt="Sponsor quiz with multiple-choice questions about Starobrno beer"
+            />
+            <figcaption class="screenshot-caption">
+              Sponsor quiz — interactive trivia with real prizes
+            </figcaption>
+          </figure>
+          <figure class="screenshot-figure">
+            <img
+              class="screenshot-img"
+              src="../assets/projects/showlifter/sl-scr07.webp"
+              alt="Starobrno quiz intro screen with prize description and rules"
+            />
+            <figcaption class="screenshot-caption">
+              Quiz intro — rules, sponsor branding, and prize details
+            </figcaption>
+          </figure>
+          <figure class="screenshot-figure">
+            <img
+              class="screenshot-img"
+              src="../assets/projects/showlifter/sl-scr08.webp"
+              alt="On-ice contest sign-up with Starobrno Beanbag competition details"
+            />
+            <figcaption class="screenshot-caption">
+              On-ice contest — sign up from your phone, compete on the rink
+            </figcaption>
+          </figure>
         </div>
       </div>
-
     </div>
 
     <footer id="footer" role="contentinfo">
-      <a class="icon-link" href="https://github.com/JondaGit" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">GitHub</a>
-      <a class="icon-link" href="https://www.linkedin.com/in/jon%C3%A1%C5%A1-tich%C3%BD-436128239/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">LinkedIn</a>
+      <a
+        class="icon-link"
+        href="https://github.com/JondaGit"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="GitHub profile"
+        >GitHub</a
+      >
+      <a
+        class="icon-link"
+        href="https://www.linkedin.com/in/jon%C3%A1%C5%A1-tich%C3%BD-436128239/"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="LinkedIn profile"
+        >LinkedIn</a
+      >
       <span class="footer-email-group">
-        <a class="icon-link" href="mailto:jon.tich@volny.cz" aria-label="Send email">Email</a>
-        <button class="copy-email-btn" id="copyEmailBtn" aria-label="Copy email address" data-email="jon.tich@volny.cz">copy</button>
+        <a
+          class="icon-link"
+          href="mailto:jon.tich@volny.cz"
+          aria-label="Send email"
+          >Email</a
+        >
+        <button
+          class="copy-email-btn"
+          id="copyEmailBtn"
+          aria-label="Copy email address"
+          data-email="jon.tich@volny.cz"
+        >
+          copy
+        </button>
       </span>
     </footer>
 
-    <div id="made-by">Made by Jonáš Tichý with the help of Mistral Vibe &amp; Claude Code</div>
+    <div id="made-by">
+      Made by Jonáš Tichý with the help of Mistral Vibe &amp; Claude Code
+    </div>
 
-    <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">↑</button>
+    <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+      ↑
+    </button>
+
+    <div
+      id="lightbox"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Image lightbox"
+    >
+      <img id="lightbox-img" src="" alt="" />
+      <p id="lightbox-caption"></p>
+      <button id="lightbox-close" aria-label="Close lightbox">close ✕</button>
+    </div>
 
     <script src="../script.js"></script>
   </body>

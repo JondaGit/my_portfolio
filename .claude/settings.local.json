@@ -7,7 +7,14 @@
       "WebFetch(domain:www.fit.vut.cz)",
       "Bash(cp *obrazovky*:*)",
       "Bash(rm *obrazovky*:*)",
-      "Bash(cp:*)"
+      "Bash(cp:*)",
+      "WebFetch(domain:showlifter.com)",
+      "Bash(ls sl-*:*)",
+      "Bash(cd /Users/jonastichy/trash/jonas_tichy_profile/assets/projects && mkdir -p showlifter tender-intelligence ibees && mv sl-* showlifter/ && mv ti-* tender-intelligence/ && mv Obr* ibees/)",
+      "Bash(cd /Users/jonastichy/trash/jonas_tichy_profile/assets/projects/ibees && cp \"Obrázek1.png\" ibees-01.png && cp \"Obrázek2.png\" ibees-02.png && cp \"Obrázek3.png\" ibees-03.png && rm Obr* && ls)",
+      "Bash(which cwebp:*)",
+      "Bash(find . -type f \\\\\\( -name \"*.png\" -o -name \"*.jpg\" -o -name \"*.jpeg\" \\\\\\) | while read f; do cwebp -q 85 \"$f\" -o \"${f%.*}.webp\" && rm \"$f\"; done && find . -type f -name \"*.webp\" | sort)",
+      "Bash(npx prettier:*)"
     ]
   }
 }

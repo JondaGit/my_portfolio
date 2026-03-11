@@ -1,15 +1,15 @@
 // ============================================
 // COPY EMAIL
 // ============================================
-const copyEmailBtn = document.getElementById('copyEmailBtn');
+const copyEmailBtn = document.getElementById("copyEmailBtn");
 if (copyEmailBtn) {
-  copyEmailBtn.addEventListener('click', () => {
+  copyEmailBtn.addEventListener("click", () => {
     navigator.clipboard.writeText(copyEmailBtn.dataset.email).then(() => {
-      copyEmailBtn.textContent = 'copied!';
-      copyEmailBtn.classList.add('copied');
+      copyEmailBtn.textContent = "copied!";
+      copyEmailBtn.classList.add("copied");
       setTimeout(() => {
-        copyEmailBtn.textContent = 'copy';
-        copyEmailBtn.classList.remove('copied');
+        copyEmailBtn.textContent = "copy";
+        copyEmailBtn.classList.remove("copied");
       }, 2000);
     });
   });
@@ -18,98 +18,117 @@ if (copyEmailBtn) {
 // ============================================
 // NAV SCROLL EFFECT
 // ============================================
-const navbar = document.getElementById('navbar');
+const navbar = document.getElementById("navbar");
 
-window.addEventListener('scroll', () => {
-  navbar.classList.toggle('scrolled', window.scrollY > 40);
-}, { passive: true });
+window.addEventListener(
+  "scroll",
+  () => {
+    navbar.classList.toggle("scrolled", window.scrollY > 40);
+  },
+  { passive: true },
+);
 
 // ============================================
 // SCROLL TO TOP
 // ============================================
-const scrollTopBtn = document.getElementById('scrollTop');
+const scrollTopBtn = document.getElementById("scrollTop");
 
-window.addEventListener('scroll', () => {
-  scrollTopBtn.classList.toggle('visible', window.scrollY > 400);
-}, { passive: true });
+window.addEventListener(
+  "scroll",
+  () => {
+    scrollTopBtn.classList.toggle("visible", window.scrollY > 400);
+  },
+  { passive: true },
+);
 
-scrollTopBtn.addEventListener('click', () => {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
+scrollTopBtn.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
 // ============================================
 // TAG POPOVERS
 // ============================================
-document.querySelectorAll('.tag-more').forEach(btn => {
+document.querySelectorAll(".tag-more").forEach((btn) => {
   const popover = btn.nextElementSibling;
 
-  btn.addEventListener('click', (e) => {
+  btn.addEventListener("click", (e) => {
     e.stopPropagation();
     const isOpen = !popover.hidden;
     // Close all others first
-    document.querySelectorAll('.tag-popover').forEach(p => { p.hidden = true; });
-    document.querySelectorAll('.tag-more').forEach(b => b.setAttribute('aria-expanded', 'false'));
+    document.querySelectorAll(".tag-popover").forEach((p) => {
+      p.hidden = true;
+    });
+    document
+      .querySelectorAll(".tag-more")
+      .forEach((b) => b.setAttribute("aria-expanded", "false"));
     // Toggle this one
     popover.hidden = isOpen;
-    btn.setAttribute('aria-expanded', String(!isOpen));
+    btn.setAttribute("aria-expanded", String(!isOpen));
   });
 });
 
-document.addEventListener('click', () => {
-  document.querySelectorAll('.tag-popover').forEach(p => { p.hidden = true; });
-  document.querySelectorAll('.tag-more').forEach(b => b.setAttribute('aria-expanded', 'false'));
+document.addEventListener("click", () => {
+  document.querySelectorAll(".tag-popover").forEach((p) => {
+    p.hidden = true;
+  });
+  document
+    .querySelectorAll(".tag-more")
+    .forEach((b) => b.setAttribute("aria-expanded", "false"));
 });
 
 // ============================================
 // LIGHTBOX
 // ============================================
-const lightbox = document.getElementById('lightbox');
+const lightbox = document.getElementById("lightbox");
 if (lightbox) {
-  const lightboxImg = document.getElementById('lightbox-img');
-  const lightboxCaption = document.getElementById('lightbox-caption');
-  const lightboxClose = document.getElementById('lightbox-close');
+  const lightboxImg = document.getElementById("lightbox-img");
+  const lightboxCaption = document.getElementById("lightbox-caption");
+  const lightboxClose = document.getElementById("lightbox-close");
 
-  document.querySelectorAll('.screenshot-img').forEach(img => {
-    img.addEventListener('click', () => {
+  document.querySelectorAll(".screenshot-img").forEach((img) => {
+    img.addEventListener("click", () => {
       lightboxImg.src = img.src;
       lightboxImg.alt = img.alt;
-      const caption = img.closest('figure')?.querySelector('.screenshot-caption')?.textContent ?? '';
+      const caption =
+        img.closest("figure")?.querySelector(".screenshot-caption")
+          ?.textContent ?? "";
       lightboxCaption.textContent = caption;
-      lightbox.classList.add('open');
-      document.body.style.overflow = 'hidden';
+      lightbox.classList.add("open");
+      document.body.style.overflow = "hidden";
       lightboxClose.focus();
     });
   });
 
   function closeLightbox() {
-    lightbox.classList.remove('open');
-    document.body.style.overflow = '';
+    lightbox.classList.remove("open");
+    document.body.style.overflow = "";
   }
 
-  lightboxClose.addEventListener('click', closeLightbox);
+  lightboxClose.addEventListener("click", closeLightbox);
 
-  lightbox.addEventListener('click', (e) => {
+  lightbox.addEventListener("click", (e) => {
     if (e.target === lightbox) closeLightbox();
   });
 
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && lightbox.classList.contains('open')) closeLightbox();
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && lightbox.classList.contains("open"))
+      closeLightbox();
   });
 }
 
 // ============================================
 // SMOOTH ANCHOR SCROLLING (offset for fixed nav)
 // ============================================
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', (e) => {
-    const href = anchor.getAttribute('href');
-    if (href === '#') return;
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+  anchor.addEventListener("click", (e) => {
+    const href = anchor.getAttribute("href");
+    if (href === "#") return;
     const target = document.querySelector(href);
     if (target) {
       e.preventDefault();
       const offset = navbar.offsetHeight + 24;
       const top = target.getBoundingClientRect().top + window.scrollY - offset;
-      window.scrollTo({ top, behavior: 'smooth' });
+      window.scrollTo({ top, behavior: "smooth" });
     }
   });
 });
