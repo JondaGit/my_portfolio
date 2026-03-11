@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Tender Intelligence — AI platform for automated procurement document analysis by Jonáš Tichý." />
+    <title>Tender Intelligence | Jonáš Tichý</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+      <div class="nav-links">
+        <a class="nav-link" href="../index.html#about">About</a>
+        <a class="nav-link" href="../index.html#experience">Experience</a>
+        <a class="nav-link" href="../index.html#projects">Projects</a>
+        <a class="nav-link" href="../index.html#education">Education</a>
+      </div>
+      <a class="button" href="mailto:jon.tich@volny.cz" aria-label="Send email to Jonáš Tichý">
+        <span class="button-text">Contact Me</span>
+      </a>
+    </nav>
+
+    <div id="main-content">
+
+      <a class="back-link" href="../index.html#projects">← Back to projects</a>
+
+      <div class="project-page-header">
+        <div class="project-meta">AI Platform &nbsp;/&nbsp; Oct 2025 – Present</div>
+        <h1 class="main-title">Tender Intelligence</h1>
+        <div class="tag-row">
+          <span class="tag">Python</span>
+          <span class="tag">LLMs</span>
+          <span class="tag">Agents</span>
+          <span class="tag">RAG</span>
+          <span class="tag">FastAPI</span>
+          <span class="tag">Docker</span>
+          <span class="tag">PostgreSQL</span>
+          <span class="tag">On-premise</span>
+        </div>
+      </div>
+
+      <div class="project-page-section">
+        <span class="subheader-text">Overview</span>
+        <p class="body-text">Designed and developed an AI platform for automated procurement document analysis and product fulfillment search. The system processes public tender documents, extracts structured requirements using large language models, and matches them against supplier price lists to generate automated bid drafts.</p>
+        <p class="body-text">Responsible for the full architecture, development, and on-premise deployment of the system, which is actively used in production and continuously improved.</p>
+      </div>
+
+      <div class="project-page-section">
+        <span class="subheader-text">What it does</span>
+        <p class="body-text">Built ingestion pipelines for processing tender documents and supplier price lists in various formats. LLMs extract structured line items, quantities, and specifications from unstructured procurement text. An agentic search layer then finds the best-matching products from supplier catalogues, enabling automated draft creation for bids.</p>
+      </div>
+
+      <div class="project-page-section">
+        <span class="subheader-text">Screenshots</span>
+        <div class="screenshot-grid">
+          <figure class="screenshot-figure full-width">
+            <img class="screenshot-img" src="../assets/projects/ti-dashboard.png" alt="Tender Intelligence dashboard showing a personalised morning greeting, My Tenders and New Tenders overview with relevance badges" />
+            <figcaption class="screenshot-caption">Dashboard — personalised overview of tenders with relevance scoring</figcaption>
+          </figure>
+          <figure class="screenshot-figure">
+            <img class="screenshot-img" src="../assets/projects/ti-tenders-list.png" alt="Tenders list view showing 800 tenders in a filterable table with status, deadlines and relevance scores" />
+            <figcaption class="screenshot-caption">Tenders list — browse and filter all tenders by status, deadline, and relevance</figcaption>
+          </figure>
+          <figure class="screenshot-figure">
+            <img class="screenshot-img" src="../assets/projects/ti-tender-detail.png" alt="Tender detail page showing AI-extracted line items for IP phones and licences with matched products and technical specifications" />
+            <figcaption class="screenshot-caption">Tender detail — AI-extracted line items with matched products and specs</figcaption>
+          </figure>
+          <figure class="screenshot-figure">
+            <img class="screenshot-img" src="../assets/projects/ti-distributor-comparator.png" alt="Distributor Comparator showing 627 vendor price entries searchable by part number with multi-vendor price comparison across ATC, Smarty, EDCC and SWS" />
+            <figcaption class="screenshot-caption">Distributor Comparator — multi-vendor price lookup across supplier catalogues</figcaption>
+          </figure>
+          <figure class="screenshot-figure">
+            <img class="screenshot-img" src="../assets/projects/ti-llm-memories.png" alt="LLM Memories view showing 153 agent observations across 16 scopes with memory entries categorised by relevance" />
+            <figcaption class="screenshot-caption">LLM Memories — persistent agent observations from product searches</figcaption>
+          </figure>
+        </div>
+      </div>
+
+    </div>
+
+    <footer id="footer" role="contentinfo">
+      <a class="icon-link" href="https://github.com/JondaGit" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">GitHub</a>
+      <a class="icon-link" href="https://www.linkedin.com/in/jon%C3%A1%C5%A1-tich%C3%BD-436128239/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">LinkedIn</a>
+      <span class="footer-email-group">
+        <a class="icon-link" href="mailto:jon.tich@volny.cz" aria-label="Send email">Email</a>
+        <button class="copy-email-btn" id="copyEmailBtn" aria-label="Copy email address" data-email="jon.tich@volny.cz">copy</button>
+      </span>
+    </footer>
+
+    <div id="made-by">Made by Jonáš Tichý with the help of Mistral Vibe &amp; Claude Code</div>
+
+    <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">↑</button>
+
+    <div id="lightbox" role="dialog" aria-modal="true" aria-label="Image lightbox">
+      <img id="lightbox-img" src="" alt="" />
+      <p id="lightbox-caption"></p>
+      <button id="lightbox-close" aria-label="Close lightbox">close ✕</button>
+    </div>
+
+    <script src="../script.js"></script>
+  </body>
+</html>

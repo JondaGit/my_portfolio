@@ -6,7 +6,8 @@
       "Bash(python3:*)",
       "WebFetch(domain:www.fit.vut.cz)",
       "Bash(cp *obrazovky*:*)",
-      "Bash(rm *obrazovky*:*)"
+      "Bash(rm *obrazovky*:*)",
+      "Bash(cp:*)"
     ]
   }
 }

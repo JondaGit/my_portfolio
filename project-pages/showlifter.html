@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Showlifter — real-time web app for live sports events by Jonáš Tichý." />
+    <title>Showlifter | Jonáš Tichý</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+      <div class="nav-links">
+        <a class="nav-link" href="../index.html#about">About</a>
+        <a class="nav-link" href="../index.html#experience">Experience</a>
+        <a class="nav-link" href="../index.html#projects">Projects</a>
+        <a class="nav-link" href="../index.html#education">Education</a>
+      </div>
+      <a class="button" href="mailto:jon.tich@volny.cz" aria-label="Send email to Jonáš Tichý">
+        <span class="button-text">Contact Me</span>
+      </a>
+    </nav>
+
+    <div id="main-content">
+
+      <a class="back-link" href="../index.html#projects">← Back to projects</a>
+
+      <div class="project-page-header">
+        <div class="project-meta">Web App &nbsp;/&nbsp; Sep 2022 – Jan 2024</div>
+        <h1 class="main-title">Showlifter</h1>
+        <div class="tag-row">
+          <span class="tag">SvelteKit</span>
+          <span class="tag">Firebase</span>
+          <span class="tag">TypeScript</span>
+          <span class="tag">Real-time</span>
+        </div>
+      </div>
+
+      <div class="project-page-section">
+        <span class="subheader-text">Overview</span>
+        <p class="body-text">Real-time web app focused on enhancing the viewer experience at live sports events and boosting audience engagement. Designed for both event operators and spectators, with separate Client and Admin interfaces.</p>
+      </div>
+
+      <div class="project-page-section">
+        <span class="subheader-text">What it does</span>
+        <p class="body-text">The Client part gives spectators a live-updating event view — scores, stats, and highlights pushed in real time. The Admin part allows event operators to manage and broadcast updates during the event. Both parts are built in SvelteKit, with Firebase handling hosting, authentication, and real-time data synchronisation as backend-as-a-service.</p>
+      </div>
+
+      <div class="project-page-section">
+        <span class="subheader-text">Screenshots</span>
+        <div class="screenshot-grid">
+          <div class="screenshot-placeholder full-width">Spectator view — replace with screenshot</div>
+          <div class="screenshot-placeholder">Admin panel — replace with screenshot</div>
+          <div class="screenshot-placeholder">Live event feed — replace with screenshot</div>
+        </div>
+      </div>
+
+    </div>
+
+    <footer id="footer" role="contentinfo">
+      <a class="icon-link" href="https://github.com/JondaGit" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">GitHub</a>
+      <a class="icon-link" href="https://www.linkedin.com/in/jon%C3%A1%C5%A1-tich%C3%BD-436128239/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">LinkedIn</a>
+      <span class="footer-email-group">
+        <a class="icon-link" href="mailto:jon.tich@volny.cz" aria-label="Send email">Email</a>
+        <button class="copy-email-btn" id="copyEmailBtn" aria-label="Copy email address" data-email="jon.tich@volny.cz">copy</button>
+      </span>
+    </footer>
+
+    <div id="made-by">Made by Jonáš Tichý with the help of Mistral Vibe &amp; Claude Code</div>
+
+    <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">↑</button>
+
+    <script src="../script.js"></script>
+  </body>
+</html>

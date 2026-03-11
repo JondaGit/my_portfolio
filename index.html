@@ -36,7 +36,6 @@
       aria-label="Main navigation"
     >
       <div class="nav-links">
-        <a class="nav-link" href="#about">About</a>
         <a class="nav-link" href="#experience">Experience</a>
         <a class="nav-link" href="#projects">Projects</a>
         <a class="nav-link" href="#education">Education</a>
@@ -70,7 +69,7 @@
               across healthcare, logistics, and AI. Currently at Adastra AI,
               working on optimization and generative AI systems from pre-sales,
               design, architecture, and development through deployment and
-              maintenance.
+              maintenance. Always eager to learn new things and build stuff :).
             </p>
             <div class="hero-actions">
               <a class="button" href="#projects">
@@ -82,25 +81,6 @@
               </a>
             </div>
           </div>
-        </div>
-      </section>
-
-      <!-- ABOUT -->
-      <section id="about" aria-label="About Jonáš Tichý">
-        <span class="subheader-text">My Background / About Me</span>
-        <div class="about-section-content">
-          <p class="body-text">
-            Full stack software engineer with over 10 years of experience
-            building software solutions across various domains. Currently
-            working at Adastra AI on optimization and AI projects spanning the
-            full lifecycle — from pre-sales and solution design to development,
-            deployment, and maintenance.
-          </p>
-          <p class="body-text">
-            Alongside my professional work, I actively build and ship personal
-            projects, explore new technologies, tackle challenging problems, and
-            create useful software solutions.
-          </p>
         </div>
       </section>
 
@@ -132,7 +112,11 @@
               <span class="tag">Terraform</span>
               <span class="tag">AWS</span>
               <span class="tag-more-wrapper">
-                <button class="tag tag-more" aria-expanded="false">
+                <button
+                  class="tag tag-more"
+                  aria-expanded="false"
+                  aria-label="Show 6 more technologies"
+                >
                   +6 more
                 </button>
                 <div class="tag-popover" hidden>
@@ -168,7 +152,11 @@
               <span class="tag">GitLab CI/CD</span>
               <span class="tag">Helm</span>
               <span class="tag-more-wrapper">
-                <button class="tag tag-more" aria-expanded="false">
+                <button
+                  class="tag tag-more"
+                  aria-expanded="false"
+                  aria-label="Show 2 more technologies"
+                >
                   +2 more
                 </button>
                 <div class="tag-popover" hidden>
@@ -190,9 +178,10 @@
               <span class="experience-note">(part-time)</span>
             </h3>
             <p class="body-text">
-              Supervised Czech first league Ice Hockey live broadcasts. Learned
-              to work in a coordinated team under pressure in a fast-paced
-              broadcast environment.
+              Supervised Czech first league Ice Hockey live broadcasts working
+              on pre-match technical setup, in-game production and
+              post-production. Learned to work in a coordinated team under
+              pressure in a fast-paced broadcast environment.
             </p>
             <div class="tag-row">
               <span class="tag">vMix</span>
@@ -231,7 +220,11 @@
                 <span class="tag">RAG</span>
                 <span class="tag">FastAPI</span>
                 <span class="tag-more-wrapper">
-                  <button class="tag tag-more" aria-expanded="false">
+                  <button
+                    class="tag tag-more"
+                    aria-expanded="false"
+                    aria-label="Show 3 more technologies"
+                  >
                     +3 more
                   </button>
                   <div class="tag-popover" hidden>
@@ -241,6 +234,7 @@
                   </div>
                 </span>
               </div>
+              <a class="project-page-card-link" href="./project-pages/tender-intelligence.html">Read more →</a>
             </div>
           </div>
 
@@ -265,6 +259,7 @@
                 <span class="tag">TypeScript</span>
                 <span class="tag">Real-time</span>
               </div>
+              <a class="project-page-card-link" href="./project-pages/showlifter.html">Read more →</a>
             </div>
           </div>
 
@@ -289,7 +284,11 @@
                 <span class="tag">Offline-first</span>
                 <span class="tag">Google Play</span>
                 <span class="tag-more-wrapper">
-                  <button class="tag tag-more" aria-expanded="false">
+                  <button
+                    class="tag tag-more"
+                    aria-expanded="false"
+                    aria-label="Show 1 more technology"
+                  >
                     +1 more
                   </button>
                   <div class="tag-popover" hidden>
@@ -297,6 +296,7 @@
                   </div>
                 </span>
               </div>
+              <a class="project-page-card-link" href="./project-pages/species-collector.html">Read more →</a>
             </div>
           </div>
 
@@ -321,6 +321,7 @@
                 <span class="tag">OpenCV</span>
                 <span class="tag">Computer Vision</span>
               </div>
+              <a class="project-page-card-link" href="./project-pages/ibees.html">Read more →</a>
             </div>
           </div>
         </div>
@@ -387,15 +388,25 @@
         aria-label="LinkedIn profile"
         >LinkedIn</a
       >
-      <a
-        class="icon-link"
-        href="mailto:jon.tich@volny.cz"
-        aria-label="Send email"
-        >jon.tich@volny.cz</a
-      >
+      <span class="footer-email-group">
+        <a
+          class="icon-link"
+          href="mailto:jon.tich@volny.cz"
+          aria-label="Send email"
+          >Email</a
+        >
+        <button
+          class="copy-email-btn"
+          id="copyEmailBtn"
+          aria-label="Copy email address"
+          data-email="jon.tich@volny.cz"
+        >copy</button>
+      </span>
     </footer>
 
-    <div id="made-by">Made by Jonáš Tichý with the help of Mistral Vibe &amp; Claude Code</div>
+    <div id="made-by">
+      Made by Jonáš Tichý with the help of Mistral Vibe &amp; Claude Code
+    </div>
 
     <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
       ↑

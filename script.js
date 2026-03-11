@@ -1,4 +1,21 @@
 // ============================================
+// COPY EMAIL
+// ============================================
+const copyEmailBtn = document.getElementById('copyEmailBtn');
+if (copyEmailBtn) {
+  copyEmailBtn.addEventListener('click', () => {
+    navigator.clipboard.writeText(copyEmailBtn.dataset.email).then(() => {
+      copyEmailBtn.textContent = 'copied!';
+      copyEmailBtn.classList.add('copied');
+      setTimeout(() => {
+        copyEmailBtn.textContent = 'copy';
+        copyEmailBtn.classList.remove('copied');
+      }, 2000);
+    });
+  });
+}
+
+// ============================================
 // NAV SCROLL EFFECT
 // ============================================
 const navbar = document.getElementById('navbar');
@@ -42,6 +59,43 @@ document.addEventListener('click', () => {
   document.querySelectorAll('.tag-popover').forEach(p => { p.hidden = true; });
   document.querySelectorAll('.tag-more').forEach(b => b.setAttribute('aria-expanded', 'false'));
 });
+
+// ============================================
+// LIGHTBOX
+// ============================================
+const lightbox = document.getElementById('lightbox');
+if (lightbox) {
+  const lightboxImg = document.getElementById('lightbox-img');
+  const lightboxCaption = document.getElementById('lightbox-caption');
+  const lightboxClose = document.getElementById('lightbox-close');
+
+  document.querySelectorAll('.screenshot-img').forEach(img => {
+    img.addEventListener('click', () => {
+      lightboxImg.src = img.src;
+      lightboxImg.alt = img.alt;
+      const caption = img.closest('figure')?.querySelector('.screenshot-caption')?.textContent ?? '';
+      lightboxCaption.textContent = caption;
+      lightbox.classList.add('open');
+      document.body.style.overflow = 'hidden';
+      lightboxClose.focus();
+    });
+  });
+
+  function closeLightbox() {
+    lightbox.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  lightboxClose.addEventListener('click', closeLightbox);
+
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) closeLightbox();
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && lightbox.classList.contains('open')) closeLightbox();
+  });
+}
 
 // ============================================
 // SMOOTH ANCHOR SCROLLING (offset for fixed nav)
