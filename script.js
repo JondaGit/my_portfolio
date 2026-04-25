@@ -1,17 +1,48 @@
 // ============================================
 // COPY EMAIL
 // ============================================
-const copyEmailBtn = document.getElementById("copyEmailBtn");
-if (copyEmailBtn) {
-  copyEmailBtn.addEventListener("click", () => {
-    navigator.clipboard.writeText(copyEmailBtn.dataset.email).then(() => {
-      copyEmailBtn.textContent = "copied!";
-      copyEmailBtn.classList.add("copied");
+function wireCopyEmailButton(btn) {
+  if (!btn) return;
+  btn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    navigator.clipboard.writeText(btn.dataset.email).then(() => {
+      btn.textContent = "copied!";
+      btn.classList.add("copied");
       setTimeout(() => {
-        copyEmailBtn.textContent = "copy";
-        copyEmailBtn.classList.remove("copied");
+        btn.textContent = "copy";
+        btn.classList.remove("copied");
       }, 2000);
     });
+  });
+}
+
+wireCopyEmailButton(document.getElementById("copyEmailBtn"));
+wireCopyEmailButton(document.getElementById("dialogCopyEmailBtn"));
+
+// ============================================
+// CONTACT DIALOG
+// ============================================
+const contactDialog = document.getElementById("contactDialog");
+if (contactDialog) {
+  const contactDialogClose = document.getElementById("contactDialogClose");
+
+  document.querySelectorAll('a[href^="mailto:"]').forEach((link) => {
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
+      contactDialog.showModal();
+    });
+  });
+
+  contactDialogClose.addEventListener("click", () => contactDialog.close());
+
+  contactDialog.addEventListener("click", (e) => {
+    const rect = contactDialog.getBoundingClientRect();
+    const inside =
+      e.clientX >= rect.left &&
+      e.clientX <= rect.right &&
+      e.clientY >= rect.top &&
+      e.clientY <= rect.bottom;
+    if (!inside) contactDialog.close();
   });
 }
 

@@ -343,6 +343,57 @@ svg {
 }
 
 /* ============================================
+   CORE STACK
+   ============================================ */
+#stack {
+  display: flex;
+  flex-direction: column;
+}
+
+.stack-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 680px;
+}
+
+.stack-row {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 20px;
+  align-items: baseline;
+  padding-bottom: 14px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.stack-row:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.stack-label {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #111;
+}
+
+.stack-values {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 0;
+}
+
+@media (max-width: 700px) {
+  .stack-row {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+}
+
+/* ============================================
    EXPERIENCE
    ============================================ */
 #experience {
@@ -544,6 +595,11 @@ svg {
 /* ============================================
    PROJECT PAGES
    ============================================ */
+/* Tighter rhythm on project detail pages — landing-page gap is too generous */
+#main-content:has(.project-page-header) {
+  gap: 40px;
+}
+
 .back-link {
   display: inline-flex;
   align-items: center;
@@ -551,7 +607,6 @@ svg {
   font-size: 13px;
   font-weight: 600;
   color: #888;
-  margin-bottom: 48px;
   transition: color 0.15s ease;
 }
 .back-link:hover {
@@ -562,8 +617,7 @@ svg {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  margin-bottom: 64px;
-  padding-bottom: 40px;
+  padding-bottom: 24px;
   border-bottom: 1px solid #e8e8e8;
 }
 
@@ -571,12 +625,31 @@ svg {
   font-size: clamp(2rem, 5vw, 3rem);
 }
 
-.project-page-section {
-  margin-bottom: 56px;
-}
-
 .project-page-section .body-text + .body-text {
   margin-top: 16px;
+}
+
+.highlight-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  list-style: none;
+  padding: 0;
+}
+.highlight-list li {
+  position: relative;
+  padding-left: 20px;
+  line-height: 1.65;
+}
+.highlight-list li::before {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 0.7em;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #111;
 }
 
 .screenshot-grid {
@@ -772,6 +845,127 @@ svg {
 .scroll-top:hover {
   background: #111;
   color: #fff;
+}
+
+/* ============================================
+   CONTACT DIALOG
+   ============================================ */
+.contact-dialog {
+  border: 2px solid #111;
+  border-radius: 6px;
+  background: #fff;
+  color: #111;
+  padding: 32px;
+  max-width: 440px;
+  width: calc(100% - 32px);
+  box-shadow: 6px 6px 0 #111;
+  position: fixed;
+  inset: 0;
+  margin: auto;
+  font-family: inherit;
+}
+
+.contact-dialog::backdrop {
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+.contact-dialog-close {
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  line-height: 1;
+  color: #888;
+  border-radius: 50%;
+  transition: color 0.15s ease, background 0.15s ease;
+}
+.contact-dialog-close:hover {
+  color: #111;
+  background: #f3f3f3;
+}
+
+.contact-dialog-title {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #111;
+  margin-bottom: 12px;
+}
+
+.contact-dialog-text {
+  margin-bottom: 24px;
+}
+
+.contact-dialog-options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contact-option {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 14px 16px;
+  border: 1.5px solid #e5e5e5;
+  border-radius: 6px;
+  background: #fafafa;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+.contact-option-link:hover {
+  border-color: #111;
+  background: #f3f3f3;
+}
+
+.contact-option-label {
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #999;
+}
+
+.contact-option-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.contact-option-value {
+  font-size: 14px;
+  font-weight: 500;
+  color: #111;
+  word-break: break-all;
+}
+
+.contact-option-arrow {
+  font-size: 14px;
+  color: #888;
+  transition: transform 0.15s ease, color 0.15s ease;
+}
+.contact-option-link:hover .contact-option-arrow {
+  color: #111;
+  transform: translate(2px, -2px);
+}
+
+@media (max-width: 480px) {
+  .contact-dialog {
+    padding: 24px;
+  }
+  .contact-dialog-title {
+    font-size: 18px;
+  }
 }
 
 /* ============================================

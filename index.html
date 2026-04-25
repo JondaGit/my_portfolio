@@ -69,7 +69,8 @@
               across healthcare, logistics, and AI. Currently at Adastra AI,
               working on optimization and generative AI systems from pre-sales,
               design, architecture, and development through deployment and
-              maintenance. Always eager to learn new things and build stuff :).
+              maintenance. Always eager to learn new things and build useful
+              products :).
             </p>
             <div class="hero-actions">
               <a class="button" href="#projects">
@@ -82,6 +83,54 @@
             </div>
           </div>
         </div>
+      </section>
+
+      <!-- CORE STACK -->
+      <section id="stack" aria-label="Core stack">
+        <span class="subheader-text">Core Stack</span>
+        <dl class="stack-list">
+          <div class="stack-row">
+            <dt class="stack-label">Frontend</dt>
+            <dd class="stack-values">
+              <span class="tag">TypeScript</span>
+              <span class="tag">React</span>
+              <span class="tag">SvelteKit</span>
+              <span class="tag">Angular</span>
+              <span class="tag">Figma</span>
+            </dd>
+          </div>
+          <div class="stack-row">
+            <dt class="stack-label">Backend</dt>
+            <dd class="stack-values">
+              <span class="tag">Python</span>
+              <span class="tag">FastAPI</span>
+              <span class="tag">Kotlin</span>
+              <span class="tag">Spring</span>
+              <span class="tag">PostgreSQL</span>
+            </dd>
+          </div>
+          <div class="stack-row">
+            <dt class="stack-label">AI / LLM</dt>
+            <dd class="stack-values">
+              <span class="tag">LangGraph</span>
+              <span class="tag">LangFuse</span>
+              <span class="tag">RAG</span>
+              <span class="tag">OpenSearch</span>
+              <span class="tag">PGVector</span>
+            </dd>
+          </div>
+          <div class="stack-row">
+            <dt class="stack-label">Cloud / DevOps</dt>
+            <dd class="stack-values">
+              <span class="tag">Docker</span>
+              <span class="tag">Kubernetes</span>
+              <span class="tag">Terraform</span>
+              <span class="tag">AWS</span>
+              <span class="tag">Azure</span>
+              <span class="tag">GCP</span>
+            </dd>
+          </div>
+        </dl>
       </section>
 
       <!-- EXPERIENCE -->
@@ -252,9 +301,10 @@
                 <span class="project-title">Showlifter</span>
               </div>
               <p class="body-text project-card-text">
-                Real-time web app focused on enhancing viewer experience at live
-                sports events and boosting user engagement. Client and Admin
-                parts written in SvelteKit, with Firebase for both hosting and
+                Real-time web application for live sports and social events,
+                with spectator-facing and admin interfaces for quizzes, polls,
+                contests, voting, and event engagement. Client and Admin parts
+                written in SvelteKit, with Firebase for both hosting and
                 backend-as-a-service.
               </p>
               <div class="tag-row">
@@ -429,6 +479,57 @@
     <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
       ↑
     </button>
+
+    <!-- CONTACT DIALOG -->
+    <dialog
+      id="contactDialog"
+      class="contact-dialog"
+      aria-labelledby="contactDialogTitle"
+    >
+      <button
+        class="contact-dialog-close"
+        id="contactDialogClose"
+        aria-label="Close dialog"
+      >
+        ×
+      </button>
+      <h2 id="contactDialogTitle" class="contact-dialog-title">
+        Let's have a chat!
+      </h2>
+      <p class="body-text contact-dialog-text">
+        I don't like the automatic mailto: popups since I never use the default
+        email client — so annoying! Copy my address directly or contact me via
+        LinkedIn and let's talk :).
+      </p>
+      <div class="contact-dialog-options">
+        <div class="contact-option">
+          <span class="contact-option-label">Email</span>
+          <div class="contact-option-row">
+            <span class="contact-option-value">jon.tich@volny.cz</span>
+            <button
+              class="copy-email-btn"
+              id="dialogCopyEmailBtn"
+              data-email="jon.tich@volny.cz"
+              aria-label="Copy email address"
+            >
+              copy
+            </button>
+          </div>
+        </div>
+        <a
+          class="contact-option contact-option-link"
+          href="https://www.linkedin.com/in/jon%C3%A1%C5%A1-tich%C3%BD-436128239/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span class="contact-option-label">LinkedIn</span>
+          <div class="contact-option-row">
+            <span class="contact-option-value">Jonáš Tichý</span>
+            <span class="contact-option-arrow" aria-hidden="true">↗</span>
+          </div>
+        </a>
+      </div>
+    </dialog>
 
     <script src="script.js"></script>
   </body>
